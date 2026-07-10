@@ -118,6 +118,8 @@ section h2 {
     flex-direction: column;
     gap: 10px;
   }
+}
+
 .hero {
   min-height: 70vh;
   display: flex;
