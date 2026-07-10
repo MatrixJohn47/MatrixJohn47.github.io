@@ -4,24 +4,104 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Urbanist:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobin Santhosh John</title>
 </head>
 <body>
-  <section class="hero">
-    <p class="hero-label">Brand Systems Designer</p>
-    <h1 class="hero-name">Mobin Santhosh John</h1>
+  <div class="wip-banner">🚧 Work in progress, actively building this out.</div>
 
-    <nav class="category-nav">
-      <a href="about.html#work" class="category-btn">Branding</a>
-      <a href="about.html#work" class="category-btn">UI / Product</a>
-      <a href="about.html#work" class="category-btn">Branding &amp; UI</a>
-      <a href="about.html#work" class="category-btn">Environment / FX</a>
-      <a href="about.html#work" class="category-btn">Thoughts &amp; Systems</a>
-    </nav>
-  </section>
+  <div class="hero">
+    <div class="conic-layer" id="conic"></div>
+    <div class="veil"></div>
+    <canvas id="canvas"></canvas>
 
-  <script src="./script.js"></script>
+    <div class="content">
+      <a href="about.html" class="hero-label">Brand Systems Designer</a>
+      <h1 class="hero-name">Mobin Santhosh John</h1>
+
+      <div class="main-group">
+        <div class="main-row">
+          <a href="about.html#work" class="btn">dot.arc</a>
+          <a href="#" class="btn placeholder">Coming soon</a>
+          <a href="#" class="btn placeholder">Coming soon</a>
+        </div>
+        <div class="bracket"></div>
+        <p class="bracket-label">Main projects</p>
+      </div>
+
+      <div class="secondary-row">
+        <a href="about.html#wip" class="btn secondary">Work in progress</a>
+        <a href="fan-art.html" class="btn secondary">Fan art projects</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
+const conic = document.getElementById('conic');
+
+const colors = ['#7f5af0', '#ff6b9d', '#ffb26b', '#8fd3ff'];
+const count = 30;
+let particles = [];
+
+let mouse = { x: w / 2, y: h / 2 };
+window.addEventListener('mousemove', e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+  const dx = (e.clientX / w - 0.5) * 30;
+  const dy = (e.clientY / h - 0.5) * 30;
+  conic.style.transform = `translate(${dx}px, ${dy}px)`;
+});
+window.addEventListener('resize', () => { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; });
+
+for (let i = 0; i < count; i++) {
+  particles.push({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    r: 18 + Math.random() * 40,
+    vx: (Math.random() - 0.5) * 0.15,
+    vy: (Math.random() - 0.5) * 0.15,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    alpha: 0.15 + Math.random() * 0.2
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, w, h);
+  ctx.filter = 'blur(35px)';
+
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < -100) p.x = w + 100;
+    if (p.x > w + 100) p.x = -100;
+    if (p.y < -100) p.y = h + 100;
+    if (p.y > h + 100) p.y = -100;
+
+    const dx = mouse.x - p.x;
+    const dy = mouse.y - p.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const pull = Math.max(0, 1 - dist / 450);
+
+    const drawX = p.x + dx * pull * 0.15;
+    const drawY = p.y + dy * pull * 0.15;
+
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.globalAlpha = p.alpha;
+    ctx.fill();
+  });
+
+  ctx.globalAlpha = 1;
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
 </body>
 </html>
