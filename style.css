@@ -76,7 +76,7 @@ section h2 {
   background-color: var(--color-accent-green);
   border-bottom-color: var(--color-accent-green);
   padding: 2px 6px;
-
+}
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
