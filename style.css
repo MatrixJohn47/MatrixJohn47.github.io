@@ -315,7 +315,7 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
   .role, .edu-item { grid-template-columns: 1fr; gap: 8px; padding: 22px 0; }
   .role-date, .edu-date { padding-top: 0; }
   .skills-grid { grid-template-columns: 1fr; gap: 26px; }
-  .closing { padding: 10px 22px 60px; }
+  .closing { padding: 10px 0 60px; }
   .closing-title { font-size: 1.4rem; }
   .closing-text { font-size: 0.9rem; }
 }
