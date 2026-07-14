@@ -1,107 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Urbanist:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobin Santhosh John</title>
+<meta charset="UTF-8">
+<title>Mobin Santhosh John</title>
+<meta name="description" content="Hi, I'm Mobin Santhosh John, a Brand Systems Designer building structured identity systems. I'm always open to good work and good people, feel free to reach out.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
+
+  .page { min-height: 100vh; display: flex; flex-direction: column; }
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+  }
+  .top-bar { border-bottom: 1px solid #d9d2c2; }
+  .bottom-bar { border-top: 1px solid #d9d2c2; margin-top: auto; }
+  .bottom-bar span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    color: #5c5648;
+  }
+
+  .icon-row { display: flex; gap: 16px; align-items: center; }
+  .icon-row a {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    opacity: 0.75;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .icon-row a:hover { opacity: 1; color: #7a1f3d; }
+
+  .top-right { display: flex; gap: 24px; align-items: center; }
+
+  .about-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 2px;
+  }
+  .about-link:hover { color: #7a1f3d; border-bottom-color: #7a1f3d; }
+
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .rule { width: 40px; height: 1px; background: #1a1a1a; margin: 0 auto 18px; }
+  .rule.bottom { margin: 0 auto 40px; }
+
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a1f3d;
+    margin-bottom: 16px;
+  }
+  .name { font-size: 3.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 18px; }
+
+  .main-group { display: flex; flex-direction: column; align-items: center; margin-bottom: 50px; }
+  .main-row { display: flex; gap: 16px; margin-bottom: 10px; }
+
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 12px 18px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 6px;
+    color: #1a1a1a;
+    background: transparent;
+    transition: all 0.2s ease;
+  }
+  .btn.primary { border-color: #7a1f3d; color: #7a1f3d; }
+  .btn.primary:hover { background: #7a1f3d; border-color: #7a1f3d; color: #f6f1e7; }
+  .btn.ghost:hover { background: #1a1a1a; border-color: #1a1a1a; color: #f6f1e7; }
+  .btn.ghost { border-color: #d9d2c2; color: #a39c8c; }
+  .btn.swap:hover { background: rgba(122,31,61,0.5); border-color: #7a1f3d; color: #f6f1e7; }
+
+  .btn.swap { position: relative; overflow: hidden; }
+  .swap-default, .swap-hover {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .swap-default { display: block; }
+  .swap-hover {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    font-size: 0.78rem;
+    opacity: 0;
+    transform: translateY(8px);
+    padding: 0 8px;
+  }
+  .btn.swap:hover .swap-default { opacity: 0; transform: translateY(-8px); }
+  .btn.swap:hover .swap-hover { opacity: 1; transform: translateY(0); }
+
+  .bracket {
+    width: 240px; height: 12px;
+    border-left: 1px solid #b7b0a0;
+    border-right: 1px solid #b7b0a0;
+    border-bottom: 1px solid #b7b0a0;
+    margin-bottom: 8px;
+  }
+  .bracket-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #a39c8c;
+  }
+
+  .secondary-row {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    padding-bottom: 36px;
+  }
+  .secondary-row a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #a39c8c;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+  }
+  .secondary-row a:hover { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+  .secondary-row a.no-uppercase { text-transform: none; }
+</style>
 </head>
-<body class="hero-page">
-  <div class="wip-banner">🚧 Work in progress, actively building this out.</div>
+<body>
 
-  <div class="hero">
-    <div class="conic-layer" id="conic"></div>
-    <div class="veil"></div>
-    <canvas id="canvas"></canvas>
+  <div class="page">
+    <div class="bar top-bar">
+      <div class="icon-row">
+        <a href="https://www.linkedin.com/in/mobinsanthosh/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.002,21.584h0.227l-0.435-0.658l0,0c0.266,0,0.407-0.169,0.409-0.376c0-0.008,0-0.017-0.001-0.025c0-0.282-0.17-0.417-0.519-0.417h-0.564v1.476h0.212v-0.643h0.261L23.002,21.584z M22.577,20.774h-0.246v-0.499h0.312c0.161,0,0.345,0.026,0.345,0.237c0,0.242-0.186,0.262-0.412,0.262"/><path d="M17.291,19.073h-3.007v-4.709c0-1.123-0.02-2.568-1.564-2.568c-1.566,0-1.806,1.223-1.806,2.487v4.79H7.908V9.389h2.887v1.323h0.04c0.589-1.006,1.683-1.607,2.848-1.564c3.048,0,3.609,2.005,3.609,4.612L17.291,19.073z M4.515,8.065c-0.964,0-1.745-0.781-1.745-1.745c0-0.964,0.781-1.745,1.745-1.745c0.964,0,1.745,0.781,1.745,1.745C6.26,7.284,5.479,8.065,4.515,8.065L4.515,8.065 M6.018,19.073h-3.01V9.389h3.01V19.073z M18.79,1.783H1.497C0.68,1.774,0.01,2.429,0,3.246V20.61c0.01,0.818,0.68,1.473,1.497,1.464H18.79c0.819,0.01,1.492-0.645,1.503-1.464V3.245c-0.012-0.819-0.685-1.474-1.503-1.463"/></svg>
+        </a>
+        <a href="https://www.behance.net/mobinsanthos" target="_blank" rel="noopener" title="Behance">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9.579,9.573C9.579,8.625,8.845,8.4,8.03,8.4H5.909v2.4h2.287C9.005,10.8,9.579,10.446,9.579,9.573z"/><path d="M16.666,10.816c-0.98,0-1.634,0.611-1.698,1.591H18.3C18.209,11.416,17.695,10.816,16.666,10.816z"/><path d="M8.368,12.509H5.904v2.834H8.32c0.922,0,1.672-0.327,1.672-1.361C9.991,12.927,9.364,12.514,8.368,12.509z"/><path d="M19.75,0.3H4.25C1.9,0.3,0,2.2,0,4.55V19.45C0,21.8,1.9,23.7,4.25,23.7h15.5c2.35,0,4.25-1.9,4.25-4.25V4.55C24,2.2,22.1,0.3,19.75,0.3z M14.555,7.184h4.168v1.012h-4.168V7.184z M8.63,17.1H3.643V6.814h4.848c1.763,0,3.289,0.498,3.289,2.544c0,1.034-0.482,1.543-1.404,1.982c1.264,0.359,1.875,1.474,1.875,2.765C12.252,16.195,10.5,17.089,8.63,17.1z M20.341,13.698h-5.368c0,1.189,0.627,1.891,1.827,1.891c0.621,0,1.42-0.332,1.618-0.97h1.805c-0.557,1.709-1.709,2.507-3.487,2.507c-2.346,0-3.809-1.591-3.809-3.911c0-2.239,1.538-3.942,3.809-3.942c2.33,0,3.621,1.837,3.621,4.039C20.357,13.441,20.346,13.575,20.341,13.698z"/></svg>
+        </a>
+        <a href="https://github.com/MatrixJohn47" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,0.296c-6.627,0-12,5.372-12,12c0,5.302,3.438,9.8,8.206,11.387c0.6,0.111,0.82-0.26,0.82-0.577c0-0.286-0.011-1.231-0.016-2.234c-3.338,0.726-4.043-1.416-4.043-1.416C4.421,18.069,3.635,17.7,3.635,17.7c-1.089-0.745,0.082-0.729,0.082-0.729c1.205,0.085,1.839,1.237,1.839,1.237c1.07,1.834,2.807,1.304,3.492,0.997C9.156,18.429,9.467,17.9,9.81,17.6c-2.665-0.303-5.467-1.332-5.467-5.93c0-1.31,0.469-2.381,1.237-3.221C5.455,8.146,5.044,6.926,5.696,5.273c0,0,1.008-0.322,3.301,1.23C9.954,6.237,10.98,6.104,12,6.099c1.02,0.005,2.047,0.138,3.006,0.404c2.29-1.553,3.297-1.23,3.297-1.23c0.653,1.653,0.242,2.873,0.118,3.176c0.769,0.84,1.235,1.911,1.235,3.221c0,4.609-2.807,5.624-5.479,5.921c0.43,0.372,0.814,1.103,0.814,2.222c0,1.606-0.014,2.898-0.014,3.293c0,0.319,0.216,0.694,0.824,0.576c4.766-1.589,8.2-6.085,8.2-11.385C24,5.669,18.627,0.296,12,0.296z"/></svg>
+        </a>
+      </div>
+      <div class="top-right">
+        <a href="about.html" class="about-link">About →</a>
+        <a href="mailto:mobinsanthoshjohn@gmail.com?subject=Let%27s%20talk&body=Hi%20Mobin%2C%0A%0A" class="about-link">Contact →</a>
+      </div>
+    </div>
 
-    <div class="content">
-      <a href="about.html" class="hero-label">Brand Systems Designer</a>
-      <h1 class="hero-name">Mobin Santhosh John</h1>
+    <div class="hero">
+      <div class="hero-center">
+        <div class="rule"></div>
+        <p class="label">Brand Systems Designer</p>
+        <h1 class="name">Mobin Santhosh John</h1>
+        <div class="rule bottom"></div>
 
-      <div class="main-group">
-        <div class="main-row">
-          <a href="about.html#work" class="btn">dot.arc</a>
-          <a href="#" class="btn placeholder">Coming soon</a>
-          <a href="#" class="btn placeholder">Coming soon</a>
+        <div class="main-group">
+          <div class="main-row">
+            <a href="#" class="btn primary">dot.arc</a>
+            <a href="#" class="btn ghost swap">
+              <span class="swap-default">dot.health</span>
+              <span class="swap-hover">Therapy chatbot</span>
+            </a>
+            <a href="#" class="btn ghost swap">
+              <span class="swap-default">FMCG Brand</span>
+              <span class="swap-hover">Guilt-free ice cream</span>
+            </a>
+          </div>
+          <div class="bracket"></div>
+          <p class="bracket-label">Active work</p>
         </div>
-        <div class="bracket"></div>
-        <p class="bracket-label">Main projects</p>
       </div>
 
       <div class="secondary-row">
-        <a href="about.html#wip" class="btn secondary">Work in progress</a>
-        <a href="fan-art.html" class="btn secondary">Fan art projects</a>
+        <a href="industry-work.html">Industry work</a>
+        <a href="vision.html" class="no-uppercase">dot. — the vision</a>
+        <a href="#">Work in progress</a>
+        <a href="fan-art.html">Fan art projects</a>
       </div>
+    </div>
+
+    <div class="bar bottom-bar">
+      <span>© 2026</span>
+      <span>PERSONAL PORTFOLIO</span>
     </div>
   </div>
 
-<script>
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-let w = canvas.width = window.innerWidth;
-let h = canvas.height = window.innerHeight;
-const conic = document.getElementById('conic');
-
-const colors = ['#7f5af0', '#ff6b9d', '#ffb26b', '#8fd3ff'];
-const count = 30;
-let particles = [];
-
-let mouse = { x: w / 2, y: h / 2 };
-window.addEventListener('mousemove', e => {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-  const dx = (e.clientX / w - 0.5) * 30;
-  const dy = (e.clientY / h - 0.5) * 30;
-  conic.style.transform = `translate(${dx}px, ${dy}px)`;
-});
-window.addEventListener('resize', () => { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; });
-
-for (let i = 0; i < count; i++) {
-  particles.push({
-    x: Math.random() * w,
-    y: Math.random() * h,
-    r: 18 + Math.random() * 40,
-    vx: (Math.random() - 0.5) * 0.15,
-    vy: (Math.random() - 0.5) * 0.15,
-    color: colors[Math.floor(Math.random() * colors.length)],
-    alpha: 0.15 + Math.random() * 0.2
-  });
-}
-
-function animate() {
-  ctx.clearRect(0, 0, w, h);
-  ctx.filter = 'blur(35px)';
-
-  particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
-    if (p.x < -100) p.x = w + 100;
-    if (p.x > w + 100) p.x = -100;
-    if (p.y < -100) p.y = h + 100;
-    if (p.y > h + 100) p.y = -100;
-
-    const dx = mouse.x - p.x;
-    const dy = mouse.y - p.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const pull = Math.max(0, 1 - dist / 450);
-
-    const drawX = p.x + dx * pull * 0.15;
-    const drawY = p.y + dy * pull * 0.15;
-
-    ctx.beginPath();
-    ctx.arc(drawX, drawY, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = p.color;
-    ctx.globalAlpha = p.alpha;
-    ctx.fill();
-  });
-
-  ctx.globalAlpha = 1;
-  requestAnimationFrame(animate);
-}
-
-animate();
-</script>
 </body>
 </html>
