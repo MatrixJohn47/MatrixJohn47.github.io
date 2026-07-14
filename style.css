@@ -215,5 +215,109 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
   .center { padding: 30px 20px; }
   .message { font-size: 0.92rem; }
 }
+
+/* ===== About page: cover, sections, experience, education, skills ===== */
+.wrap { max-width: 900px; margin: 0 auto; padding: 60px 40px 0; }
+
+.closing { padding: 60px 0 60px; text-align: left; }
+.closing-rule { width: 40px; height: 1px; background: #1a1a1a; margin: 0 0 24px; }
+.closing-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: #7a1f3d; margin-bottom: 16px; }
+.closing-title { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 16px; }
+.closing-text { font-size: 0.98rem; color: #5c5648; line-height: 1.6; max-width: 480px; margin: 0 0 30px; }
+.closing-btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 12px 28px;
+  text-decoration: none;
+  border: 1.5px solid #7a1f3d;
+  border-radius: 6px;
+  color: #7a1f3d;
+  transition: all 0.2s ease;
+}
+.closing-btn:hover { background: #7a1f3d; color: #f6f1e7; }
+
+.closing-contacts { margin-top: 20px; display: flex; gap: 24px; flex-wrap: wrap; }
+.closing-contacts a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  color: #a39c8c;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+.closing-contacts a:hover { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+
+.cover { margin-bottom: 90px; }
+.cover-index {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7a1f3d;
+  margin-bottom: 20px;
+}
+.cover-name {
+  font-size: 2.7rem;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+.cover-summary { font-size: 1.05rem; color: #5c5648; line-height: 1.7; max-width: 620px; }
+
+.meta-row { display: flex; gap: 50px; margin-top: 40px; padding-top: 24px; border-top: 1px solid #1a1a1a; }
+.meta-item { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: #a39c8c; letter-spacing: 0.5px; }
+.meta-item strong { display: block; color: #1a1a1a; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; margin-top: 4px; letter-spacing: normal; }
+
+.section { margin-bottom: 80px; }
+.section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 40px; }
+.section-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #a39c8c; }
+.section-title { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+
+.role { display: grid; grid-template-columns: 160px 1fr; gap: 30px; padding: 28px 0; border-top: 1px solid #d9d2c2; }
+.role:last-child { border-bottom: 1px solid #d9d2c2; }
+.role-date { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #a39c8c; letter-spacing: 0.5px; padding-top: 3px; }
+.role-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
+.role-company { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #7a1f3d; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 14px; }
+.role-desc { font-size: 0.92rem; color: #5c5648; line-height: 1.65; max-width: 540px; }
+.role-desc li { margin-bottom: 6px; margin-left: 18px; }
+
+.edu-item { display: grid; grid-template-columns: 160px 1fr; gap: 30px; padding: 24px 0; border-top: 1px solid #d9d2c2; }
+.edu-item:last-child { border-bottom: 1px solid #d9d2c2; }
+.edu-date { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #a39c8c; padding-top: 3px; }
+.edu-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.edu-school { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #7a1f3d; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
+.edu-note { font-size: 0.88rem; color: #5c5648; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.skill-group-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: #a39c8c; margin-bottom: 14px; }
+.skill-line { font-size: 0.95rem; padding: 8px 0; border-top: 1px solid #d9d2c2; }
+.skill-line:last-child { border-bottom: 1px solid #d9d2c2; }
+
+.lang-row { display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #d9d2c2; font-size: 0.95rem; }
+.lang-row:last-child { border-bottom: 1px solid #d9d2c2; }
+.lang-row span:last-child { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #a39c8c; }
+
+/* About page mobile */
+@media (max-width: 640px) {
+  .wrap { padding: 40px 22px 0; }
+  .cover { margin-bottom: 55px; }
+  .cover-name { font-size: 1.9rem; letter-spacing: -1px; }
+  .cover-summary { font-size: 0.92rem; }
+  .meta-row { flex-direction: column; gap: 16px; margin-top: 28px; padding-top: 18px; }
+  .section { margin-bottom: 55px; }
+  .section-title { font-size: 1.25rem; }
+  .role, .edu-item { grid-template-columns: 1fr; gap: 8px; padding: 22px 0; }
+  .role-date, .edu-date { padding-top: 0; }
+  .skills-grid { grid-template-columns: 1fr; gap: 26px; }
+  .closing { padding: 10px 22px 60px; }
+  .closing-title { font-size: 1.4rem; }
+  .closing-text { font-size: 0.9rem; }
+}
 .page-title { font-size: 2.4rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 18px; }
 .message { color: #5c5648; font-size: 1rem; max-width: 420px; margin-bottom: 34px; line-height: 1.5; }
