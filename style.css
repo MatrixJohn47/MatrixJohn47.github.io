@@ -190,7 +190,7 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
   .about-link, .home-link { font-size: 0.68rem; letter-spacing: 1px; }
   .icon-row { gap: 12px; }
 
-  .page { min-height: auto; }
+  
   .hero { flex: none; }
   .hero-center { flex: none; padding: 50px 20px 40px; }
 
