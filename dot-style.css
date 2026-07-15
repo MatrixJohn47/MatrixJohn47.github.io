@@ -89,7 +89,7 @@ a:focus-visible,.cta:focus-visible{outline:2px solid var(--pastel-green);outline
   section{opacity:1;transform:none;}
   .bigbang-sticky,.pixel-sticky,.star-sticky{position:relative;top:auto;height:auto;min-height:60vh;}
   .tall{min-height:auto;}
-
+}
 
 .arc-hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: calc(8vh + 60px) 6vw 8vh; }
 .arc-status { font-family: var(--body); font-size: 11px; letter-spacing: 3px; color: var(--pastel-green); text-transform: uppercase; margin-bottom: 1.5rem; }
@@ -97,4 +97,3 @@ a:focus-visible,.cta:focus-visible{outline:2px solid var(--pastel-green);outline
 .arc-title .heavy { font-weight: 800; }
 .arc-line { font-family: var(--body); font-size: clamp(15px,2vw,19px); color: var(--mist); max-width: 540px; margin: 2rem auto 0; }
 .arc-note { max-width: 460px; font-size: 13px; color: var(--light-grey); border-top: 1px solid var(--graphite); padding-top: 1.25rem; margin-top: 3rem; }
-}
