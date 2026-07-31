@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Private Work — Mobin Santhosh John</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .gate { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; }
+  .gate-label { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #7a1f3d; margin-bottom: 16px; }
+  .gate-title { font-size: 1.6rem; font-weight: 800; margin-bottom: 24px; }
+  .gate input {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; padding: 12px 16px;
+    border: 1.5px solid #1a1a1a; border-radius: 6px; background: transparent; color: #1a1a1a;
+    width: 240px; margin-bottom: 14px; text-align: center;
+  }
+  .gate button {
+    font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; padding: 12px 26px;
+    border: 1.5px solid #1a1a1a; border-radius: 6px; background: #1a1a1a; color: #f6f1e7; cursor: pointer;
+  }
+  .gate-error { color: #7a1f3d; font-size: 0.8rem; margin-top: 12px; font-family: 'JetBrains Mono', monospace; display: none; }
+  .content { display: none; }
+</style>
+</head>
+<body>
+
+<div class="gate" id="gate">
+  <p class="gate-label">Private / Shared by request only</p>
+  <h1 class="gate-title">This page requires a password</h1>
+  <form id="gateForm">
+    <input type="password" id="gateInput" placeholder="Enter password" autocomplete="off">
+    <br>
+    <button type="submit">Enter</button>
+  </form>
+  <p class="gate-error" id="gateError">That's not it, try again.</p>
+</div>
+
+<div class="content" id="content">
+
+  <div class="bar top-bar">
+    <a href="../" class="home-link">← Home</a>
+    <a href="mailto:mobinsanthoshjohn@gmail.com?subject=Let%27s%20talk&body=Hi%20Mobin%2C%0A%0A" class="home-link">Contact →</a>
+  </div>
+
+  <div class="wrap">
+
+    <div class="card-grid-view" id="cardGridView">
+      <p class="page-index">Private / Shared by request only</p>
+      <h1 class="page-title">Additional Work</h1>
+      <p class="page-sub">Client work not shown publicly. Organized by type, same as everything else.</p>
+
+      <div class="featured-card" id="featuredCard" data-cat="Full System Showcase" data-count="4">
+        <div class="featured-label">Featured</div>
+        <div class="featured-title">One event, seen whole, every touchpoint together →</div>
+      </div>
+
+      <div class="card-grid">
+        <div class="cat-card" data-cat="EDMs" data-count="13">
+          <div class="cat-num">01</div>
+          <div class="cat-name">EDMs</div>
+        </div>
+        <div class="cat-card" data-cat="Event Onsite Collaterals" data-count="8">
+          <div class="cat-num">02</div>
+          <div class="cat-name">Event Onsite Collaterals</div>
+        </div>
+        <div class="cat-card" data-cat="Social Media" data-count="0">
+          <div class="cat-num">03</div>
+          <div class="cat-name">Social Media</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-view" id="galleryView">
+      <a class="back-link" id="backLink">← Back to categories</a>
+      <h2 class="gallery-title" id="galleryTitle"></h2>
+      <div class="skeleton-grid" id="skeletonGrid"></div>
+      <p class="empty-note">Real work being added here soon</p>
+    </div>
+
+  </div>
+
+  <div class="edm-overlay" id="edmOverlay">
+    <div class="edm-frame-wrap">
+      <button class="edm-close" id="edmClose">×</button>
+      <div class="edm-frame">
+        <div class="edm-frame-toolbar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8V7l-3 2-3-2-3 2-3-2-3 2-3-2v1l3 2v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-9l3-2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg>
+        </div>
+        <div class="edm-frame-header">
+          <div class="edm-frame-subject-line" id="edmSubject"></div>
+          <div class="edm-sender-row">
+            <div class="edm-avatar" id="edmAvatar"></div>
+            <div class="edm-sender-info">
+              <div class="edm-sender-name" id="edmSenderName"></div>
+              <div class="edm-sender-to">to me</div>
+            </div>
+            <div class="edm-sender-date">Today</div>
+          </div>
+        </div>
+        <div class="edm-frame-body" id="edmFrameBody">
+          <div class="skeleton-box"></div>
+        </div>
+        <div class="edm-rights" id="edmRights"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Password gate. Client-side only, deters casual visitors, not a real security lock.
+  const CORRECT_PASSWORD = "changeme"; // ← change this to your actual password before pushing
+  const gate = document.getElementById('gate');
+  const content = document.getElementById('content');
+  const gateForm = document.getElementById('gateForm');
+  const gateInput = document.getElementById('gateInput');
+  const gateError = document.getElementById('gateError');
+
+  gateForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (gateInput.value === CORRECT_PASSWORD) {
+      gate.style.display = 'none';
+      content.style.display = 'block';
+    } else {
+      gateError.style.display = 'block';
+      gateInput.value = '';
+    }
+  });
+</script>
+
+<script src="../industry-work.js"></script>
+
+</body>
+</html>
