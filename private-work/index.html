@@ -23,6 +23,8 @@
   }
   .gate-error { color: #7a1f3d; font-size: 0.8rem; margin-top: 12px; font-family: 'JetBrains Mono', monospace; display: none; }
   .content { display: none; }
+
+  .content.blurred { filter: blur(20px); pointer-events: none; user-select: none; }
 </style>
 </head>
 <body>
@@ -129,6 +131,24 @@
     } else {
       gateError.style.display = 'block';
       gateInput.value = '';
+    }
+  });
+
+  // Basic deterrents. These discourage casual copying, they do not prevent
+  // screenshots or a phone camera pointed at the screen, that's not something
+  // any website can actually stop.
+
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+  // Disable dragging images out of the page
+  document.addEventListener('dragstart', (e) => e.preventDefault());
+
+  // Blur the content whenever the tab loses focus (e.g. someone opens
+  // screen recording software, or switches away mid-capture)
+  document.addEventListener('visibilitychange', () => {
+    if (content.style.display === 'block') {
+      content.classList.toggle('blurred', document.hidden);
     }
   });
 </script>
