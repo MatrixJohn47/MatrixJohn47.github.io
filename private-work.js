@@ -41,7 +41,25 @@ const categoryClients = {
 const socialPosts = [
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement Final.png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement.png' },
-  // sample placeholder, remove once real posts are added
+  { image: '../assets/private-work/social-media/HR UAE Announcement.png' },
+  { image: '../assets/private-work/social-media/DTS Qatar Event Announcement.png' },
+  { image: '../assets/private-work/social-media/HR UAE Event Announcement.png' },
+  { image: '../assets/private-work/social-media/DTS UAE I'm Speaking.png' },
+  { image: '../assets/private-work/social-media/HR UAE I'm Speaking.png' },
+  { image: '../assets/private-work/social-media/CFO SA I'm Speaking.png' },
+  { image: '../assets/private-work/social-media/HR South Africa I'm Speaking.png' },
+  { image: '../assets/private-work/social-media/Devops Dubai 2024.jpeg' },
+  { image: '../assets/private-work/social-media/DTS Qatar 2days to go.png' },
+  { image: '../assets/private-work/social-media/DTS Qatar 1 day to go.png' },
+  { image: '../assets/private-work/social-media/CSS Philippines 1 day to go.png' },
+  { image: '../assets/private-work/social-media/Freshworks_Social Media Announcement.png' },
+  { image: '../assets/private-work/social-media/MITS Thailand 1 day to go.png' },
+  { image: '../assets/private-work/social-media/MIts Thailand 2days to go.png' },
+  { image: '../assets/private-work/social-media/Mits India i'm Speaking.png' },
+  { image: '../assets/private-work/social-media/Women's Day.png' },
+  { image: '../assets/private-work/social-media/HR South Africa Whatsapp 2.png' },
+  { image: '../assets/private-work/social-media/DTS Thailand Ads.png' },
+  { image: '../assets/private-work/social-media/CFO KSA Whatsapp Campaign.png' },
   // { image: '../assets/private-work/social-01.jpg' },
 ];
 
