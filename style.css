@@ -477,13 +477,24 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
 .social-tile img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .lightbox {
-  display: none; position: fixed; inset: 0; z-index: 100;
+  display: flex; position: fixed; inset: 0; z-index: 100;
   align-items: center; justify-content: center; padding: 20px;
   background: rgba(246,241,231,0.75); backdrop-filter: blur(20px);
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
-.lightbox.open { display: flex; }
-.lightbox-img-wrap { max-width: 90vw; max-height: 90vh; }
+.lightbox.open {
+  opacity: 1;
+}
+.lightbox-img-wrap {
+  max-width: 90vw; max-height: 90vh;
+  transform: scale(0.96);
+  transition: transform 0.35s ease;
+}
+.lightbox.open .lightbox-img-wrap {
+  transform: scale(1);
+}
 .lightbox-img-wrap img {
   max-width: 90vw; max-height: 90vh; width: auto; height: auto;
   border-radius: 8px; display: block; object-fit: contain;
