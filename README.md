@@ -2,6 +2,8 @@
 
 # mobinsanthoshjohn.com
 
+# https://mobinsanthoshjohnportfolio.netlify.app/  - development branch link
+
 Personal portfolio site. Plain HTML, CSS, and JS, no build tools, no frameworks. Hosted on GitHub Pages via the `main` branch.
 
 ## Structure
