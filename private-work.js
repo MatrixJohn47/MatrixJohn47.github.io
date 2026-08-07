@@ -62,8 +62,9 @@ function openLightbox(imagePath) {
   lightboxImg.src = imagePath;
   lightbox.classList.add('open');
 }
-lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
-lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+function closeLightbox() {
+  lightbox.classList.remove('open');
+}
 
 function renderSocialMedia() {
   skeletonGrid.className = 'social-grid';
@@ -73,7 +74,8 @@ function renderSocialMedia() {
     if (post.image) {
       tile.className = 'social-tile';
       tile.innerHTML = `<img src="${post.image}" alt="">`;
-      tile.addEventListener('click', () => openLightbox(post.image));
+      tile.addEventListener('mouseenter', () => openLightbox(post.image));
+      tile.addEventListener('mouseleave', () => closeLightbox());
     } else {
       tile.className = 'social-tile placeholder';
     }
