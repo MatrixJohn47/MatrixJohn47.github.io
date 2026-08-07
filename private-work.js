@@ -39,7 +39,9 @@ const categoryClients = {
 
 // Add real image paths here as posts become available.
 const socialPosts = [
-  { image: null } // sample placeholder, remove once real posts are added
+  { image: ../assets/private-work/social-media/BFSI Kenya Announcement Final.png } 
+  
+  // sample placeholder, remove once real posts are added
   // { image: '../assets/private-work/social-01.jpg' },
 ];
 
