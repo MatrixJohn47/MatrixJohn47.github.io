@@ -7,9 +7,15 @@ const backLink = document.getElementById('backLink');
 
 const edmOverlay = document.getElementById('edmOverlay');
 const edmSubject = document.getElementById('edmSubject');
+const edmSenderName = document.getElementById('edmSenderName');
+const edmAvatar = document.getElementById('edmAvatar');
 const edmRights = document.getElementById('edmRights');
 const edmClose = document.getElementById('edmClose');
 const edmFrameBody = document.getElementById('edmFrameBody');
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
 
 const categoryClients = {
   'EDMs': [
@@ -17,8 +23,8 @@ const categoryClients = {
     { name: 'Zoom', image: null },
     { name: 'SAAS22', image: null },
     { name: 'Okta', image: null },
-    { name: 'Neat', image: '../assets/industry-work/neat-edm.png' },
-    { name: 'Infobip', image: '../assets/industry-work/infobip.png' },
+    { name: 'Neat', image: '../assets/private-work/neat-edm.png' },
+    { name: 'Infobip', image: '../assets/private-work/infobip.png' },
     { name: 'Databricks', image: null },
     { name: 'Snowflake|MLAI|Microsoft', image: null },
     { name: 'SHI|AWS', image: null },
@@ -28,12 +34,19 @@ const categoryClients = {
     { name: 'Digitus', image: null }
   ],
   'Event Onsite Collaterals': ['DTS', 'CSS', 'Infor', 'SAP|IKYAM', 'Concentrix+Genesys', 'SHI|AWS|Snowflake', 'Freshworks+Emergys', 'Concentrix+PaloAlto'],
-  'Full System Showcase': ['Mongodb', 'GCP', 'Cygnet one', 'Coursera'],
-  'Social Media': []
+  'Full System Showcase': ['Mongodb', 'GCP', 'Cygnet one', 'Coursera']
 };
+
+// Add real image paths here as posts become available.
+const socialPosts = [
+  { image: null } // sample placeholder, remove once real posts are added
+  // { image: '../assets/private-work/social-01.jpg' },
+];
 
 function openEdm(client, imagePath) {
   edmSubject.textContent = `${client} — Event Invitation`;
+  edmSenderName.textContent = client;
+  edmAvatar.textContent = client.charAt(0).toUpperCase();
   edmRights.textContent = `© All rights belong to ${client} & Exito Media Concepts.`;
   edmFrameBody.innerHTML = imagePath
     ? `<img src="${imagePath}" alt="EDM designed for ${client}" style="width:100%; display:block;">`
@@ -43,37 +56,71 @@ function openEdm(client, imagePath) {
 edmClose.addEventListener('click', () => edmOverlay.classList.remove('open'));
 edmOverlay.addEventListener('click', (e) => { if (e.target === edmOverlay) edmOverlay.classList.remove('open'); });
 
+function openLightbox(imagePath) {
+  lightboxImg.src = imagePath;
+  lightbox.classList.add('open');
+}
+lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+
+function renderSocialMedia() {
+  skeletonGrid.className = 'social-grid';
+  skeletonGrid.innerHTML = '';
+  socialPosts.forEach(post => {
+    const tile = document.createElement('div');
+    if (post.image) {
+      tile.className = 'social-tile';
+      tile.innerHTML = `<img src="${post.image}" alt="">`;
+      tile.addEventListener('click', () => openLightbox(post.image));
+    } else {
+      tile.className = 'social-tile placeholder';
+    }
+    skeletonGrid.appendChild(tile);
+  });
+  const rights = document.createElement('p');
+  rights.className = 'social-rights';
+  rights.textContent = '© All copyrights belong to Exito Media Concepts and the respective clients of each post.';
+  skeletonGrid.after(rights);
+}
+
 cards.forEach(card => {
   card.addEventListener('click', () => {
     galleryTitle.textContent = card.dataset.cat;
-    const clients = categoryClients[card.dataset.cat] || [];
+    skeletonGrid.className = 'skeleton-grid';
     skeletonGrid.innerHTML = '';
-    const isEdmCategory = card.dataset.cat.includes('EDM');
+    document.querySelector('.social-rights')?.remove();
 
-    clients.forEach((entry) => {
-      const client = isEdmCategory ? entry.name : entry;
-      const image = isEdmCategory ? entry.image : null;
-      const item = document.createElement('div');
-      item.className = 'skeleton-item';
+    if (card.dataset.cat === 'Social Media') {
+      renderSocialMedia();
+    } else {
+      const clients = categoryClients[card.dataset.cat] || [];
+      const isEdmCategory = card.dataset.cat.includes('EDM');
 
-      if (isEdmCategory) {
-        const tile = document.createElement('div');
-        tile.className = 'logo-tile';
-        tile.innerHTML = `<span>${client}</span>`;
-        tile.addEventListener('click', () => openEdm(client, image));
-        item.appendChild(tile);
-      } else {
-        const box = document.createElement('div');
-        box.className = 'skeleton-box';
-        item.appendChild(box);
-      }
+      clients.forEach((entry) => {
+        const client = isEdmCategory ? entry.name : entry;
+        const image = isEdmCategory ? entry.image : null;
+        const item = document.createElement('div');
+        item.className = 'skeleton-item';
 
-      const caption = document.createElement('div');
-      caption.className = 'skeleton-caption';
-      caption.textContent = `Designed at Exito Media Concepts, for ${client}`;
-      item.appendChild(caption);
-      skeletonGrid.appendChild(item);
-    });
+        if (isEdmCategory) {
+          const tile = document.createElement('div');
+          tile.className = 'logo-tile';
+          tile.innerHTML = `<span>${client}</span>`;
+          tile.addEventListener('click', () => openEdm(client, image));
+          item.appendChild(tile);
+        } else {
+          const box = document.createElement('div');
+          box.className = 'skeleton-box';
+          item.appendChild(box);
+        }
+
+        const caption = document.createElement('div');
+        caption.className = 'skeleton-caption';
+        caption.textContent = `Designed at Exito Media Concepts, for ${client}`;
+        item.appendChild(caption);
+        skeletonGrid.appendChild(item);
+      });
+    }
     cardGridView.classList.add('hidden');
     galleryView.classList.add('active');
     window.scrollTo(0,0);
