@@ -67,18 +67,18 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
   text-align: center;
 }
 
-.rule { width: 40px; height: 1px; background: #1a1a1a; margin: 0 auto 18px; }
-.rule.bottom { margin: 0 auto 40px; }
+.rule { width: 50px; height: 1px; background: #1a1a1a; margin: 0 auto 22px; }
+.rule.bottom { margin: 0 auto 50px; }
 
 .label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
-  letter-spacing: 2px;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: #7a1f3d;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
-.name { font-size: 3.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 18px; }
+.name { font-size: 4.2rem; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 20px; }
 
 .main-group { display: flex; flex-direction: column; align-items: center; margin-bottom: 50px; }
 .main-row { display: flex; gap: 16px; margin-bottom: 10px; }
@@ -86,10 +86,10 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
 /* ===== Buttons ===== */
 .btn {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  padding: 12px 18px;
-  width: 150px;
+  padding: 18px 40px;
+  width: auto;
   text-align: center;
   text-decoration: none;
   border: 1.5px solid #1a1a1a;
