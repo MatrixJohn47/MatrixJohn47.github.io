@@ -106,7 +106,7 @@ function renderSocialMedia() {
   });
   const rights = document.createElement('p');
   rights.className = 'social-rights';
-  rights.textContent = '© All copyrights belong to Exito Media Concepts and the respective clients of each post. These are client-approved designs, some shown here are my own variations of the same.';';
+  rights.textContent = '© All copyrights belong to Exito Media Concepts and the respective clients of each post. These are client-approved designs, some shown here are my own variations of the same.';
   skeletonGrid.after(rights);
 }
 
