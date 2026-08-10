@@ -3,30 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work in progress — Mobin Santhosh John</title>
-<meta name="description" content="This section of the portfolio is currently being built.">
+<title>Work in Progress — Mobin Santhosh John</title>
+<meta name="description" content="Personal brand systems currently in development.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
+<style>
+  .wip-wrap { max-width: 720px; margin: 0 auto; padding: 60px 40px; }
+  .wip-list { display: flex; flex-direction: column; margin-top: 40px; }
+  .wip-card {
+    border-top: 1px solid #d9d2c2; padding: 24px 0; cursor: pointer;
+  }
+  .wip-card:last-child { border-bottom: 1px solid #d9d2c2; }
+  .wip-card-head { display: flex; justify-content: space-between; align-items: center; }
+  .wip-name { font-size: 1.3rem; font-weight: 700; }
+  .wip-category { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: #a39c8c; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+  .wip-toggle { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; color: #7a1f3d; transition: transform 0.25s ease; }
+  .wip-card.open .wip-toggle { transform: rotate(45deg); }
+  .wip-brief {
+    max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+  .wip-card.open .wip-brief { max-height: 600px; padding-top: 16px; }
+  .wip-brief p { color: #5c5648; font-size: 0.95rem; line-height: 1.6; max-width: 560px; }
+</style>
 </head>
 <body>
-  <div class="page">
-    <div class="bar top-bar">
-      <a href="../" class="home-link">← Home</a>
-      <a href="mailto:mobinsanthoshjohn@gmail.com?subject=Let%27s%20talk&body=Hi%20Mobin%2C%0A%0A" class="home-link">Contact →</a>
+
+<div class="bar top-bar">
+  <a href="../" class="home-link">← Home</a>
+  <a href="mailto:mobinsanthoshjohn@gmail.com?subject=Let%27s%20talk&body=Hi%20Mobin%2C%0A%0A" class="home-link">Contact →</a>
+</div>
+
+<div class="wip-wrap">
+  <p class="page-index">Index / 07 — Work in Progress</p>
+  <h1 class="page-title">Work in Progress</h1>
+  <p class="page-sub">Personal brand systems currently in development. Tap a card for a brief.</p>
+
+  <div class="wip-list" id="wipList">
+    <div class="wip-card">
+      <div class="wip-card-head">
+        <div>
+          <div class="wip-name">Currus</div>
+          <div class="wip-category">Automotive Brand</div>
+        </div>
+        <span class="wip-toggle">+</span>
+      </div>
+      <div class="wip-brief">
+        <p>Most car brands are quietly failing at EV sub-branding right now, either bolting on a green badge and calling it done, or launching a whole new identity that abandons everything customers already recognize. Currus Motors is built to answer that problem properly. One master logo, one restrained two-color system, and the EV mark is a deliberate evolution of the original, not a break from it. Three models, family, sport, SUV, exist in both fuel and electric versions, proving the same brand can flex across a full range without fragmenting into five different logos and a dozen inconsistent touchpoints. The full system gets built out across brand guidelines, a working website prototype, two brochures, social creative, a billboard, and an event mockup, everything a real launch would need. Car imagery is AI-generated, deliberately and openly, standing in for commissioned photography, this project is about proving brand systems thinking, not claiming a skill in rendering vehicles.</p>
+      </div>
     </div>
-    <div class="center">
-      <div class="rule"></div>
-      <p class="status">In progress</p>
-      <h1 class="page-title">Work in Progress Projects</h1>
-      <p class="message">This section is currently being built. Check back soon, or reach out directly if you'd like to see this work sooner.</p>
-      <a href="../" class="btn standalone">Back to home</a>
+
+    <div class="wip-card">
+      <div class="wip-card-head">
+        <div>
+          <div class="wip-name">The Real Scoop</div>
+          <div class="wip-category">FMCG / Ice Cream Brand</div>
+        </div>
+        <span class="wip-toggle">+</span>
+      </div>
+      <div class="wip-brief">
+        <p>Most "healthy" ice cream brands quietly hide the compromise, thin serving sizes disguised as normal ones, artificial sweeteners buried in the fine print, ingredient lists built to survive a glance, not a real read. The Real Scoop is built on the opposite bet, that honesty itself can be the premium positioning. Four lines sit under one masterbrand, Protein for genuine recovery, Balance for people managing sugar without wanting to feel punished for it, Plant-based that's actually creamy instead of icy, and Exotic for flavor territory most brands won't touch, plus Two Spoons, a sharing-occasion line built around flavor pairings people actually want to be seen buying. Every ingredient decision traces back to a real commitment, real dairy where it's dairy, no artificial sweeteners, nothing hidden. Even packaging follows the same logic, two honest cup sizes, no oversized tubs pretending to be a better deal. It's a full brand architecture, not a single product with a clever name.</p>
+      </div>
     </div>
-    <div class="bar bottom-bar">
-      <span>© 2026</span>
-      <span>PERSONAL PORTFOLIO</span>
+
+    <div class="wip-card">
+      <div class="wip-card-head">
+        <div>
+          <div class="wip-name">Solidus</div>
+          <div class="wip-category">Finance / Credit Brand</div>
+        </div>
+        <span class="wip-toggle">+</span>
+      </div>
+      <div class="wip-brief">
+        <p>Credit and personal finance branding tends to fall into one of two traps, cold and clinical, or aggressively friendly in a way that feels like it's hiding something. Solidus is an early exploration of a third way, a credit-based finance brand built around clarity and trust rather than either extreme. Still taking shape, more will land here as the concept develops.</p>
+      </div>
     </div>
   </div>
+</div>
+
+<script>
+  document.querySelectorAll('.wip-card').forEach(card => {
+    card.querySelector('.wip-card-head').addEventListener('click', () => {
+      card.classList.toggle('open');
+    });
+  });
+</script>
+
 </body>
 </html>
-
