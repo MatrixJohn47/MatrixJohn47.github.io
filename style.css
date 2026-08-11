@@ -424,39 +424,174 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
 .logo-tile:hover { border-color: #1a1a1a; background: #f0ebe0; }
 .logo-tile span { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #5c5648; letter-spacing: 0.5px; }
 
+/* ===== EDM Viewer ===== */
+
 .edm-overlay {
-  display: none; position: fixed; inset: 0; z-index: 100;
-  background: rgba(26,26,26,0.55); backdrop-filter: blur(3px);
-  align-items: center; justify-content: center; padding: 40px 20px;
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(26, 26, 26, 0.55);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
 }
-.edm-overlay.open { display: flex; }
+
+.edm-overlay.open {
+  display: flex;
+}
+
+.edm-frame-wrap {
+  position: relative;
+  width: min(900px, 100%);
+  max-height: 90vh;
+}
+
 .edm-frame {
-  background: #fff; border-radius: 10px; overflow: hidden;
-  width: min(750px, 100%); max-height: 88vh; display: flex; flex-direction: column;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
-.edm-frame-bar {
-  background: #efece4; padding: 12px 16px; display: flex; align-items: center; gap: 8px;
+
+/* Toolbar */
+
+.edm-frame-toolbar {
+  background: #efece4;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
   border-bottom: 1px solid #ddd6c8;
+  flex-shrink: 0;
 }
-.edm-frame-dot { width: 9px; height: 9px; border-radius: 50%; background: #d9d2c2; }
-.edm-frame-subject {
-  font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #8a8478;
-  margin-left: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+
+.edm-frame-toolbar svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: block;
 }
-.edm-frame-body { overflow-y: auto; flex: 1; }
+
+/* Email header */
+
+.edm-frame-header {
+  background: #fff;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ddd6c8;
+  flex-shrink: 0;
+}
+
+.edm-frame-subject-line {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.edm-sender-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edm-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #7a1f3d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.edm-sender-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.edm-sender-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.edm-sender-to {
+  font-size: 0.72rem;
+  color: #8a8478;
+}
+
+.edm-sender-date {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: #8a8478;
+}
+
+/* EDM content */
+
+.edm-frame-body {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  background: #fff;
+  padding: 24px;
+}
+
+.edm-frame-body img {
+  display: block;
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .edm-frame-body .skeleton-box {
-  aspect-ratio: unset; height: 900px; border-radius: 0;
+  aspect-ratio: unset;
+  height: 900px;
+  border-radius: 0;
 }
+
+/* Copyright */
+
 .edm-rights {
-  text-align: center; padding: 16px; font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem; color: #a39c8c; background: #fbf8f2; border-top: 1px solid #d9d2c2;
+  text-align: center;
+  padding: 14px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: #a39c8c;
+  background: #fbf8f2;
+  border-top: 1px solid #d9d2c2;
+  flex-shrink: 0;
 }
+
+/* Close button */
+
 .edm-close {
-  position: absolute; top: -40px; right: 0; background: none; border: none;
-  color: #f6f1e7; font-size: 1.8rem; cursor: pointer; line-height: 1;
+  position: absolute;
+  top: -34px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #f6f1e7;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
 }
-.edm-frame-wrap { position: relative; }
+
+.edm-close:hover {
+  opacity: 0.7;
+}
 
 
 
