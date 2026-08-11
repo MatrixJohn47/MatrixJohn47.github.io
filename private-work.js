@@ -75,7 +75,7 @@ function openEdm(client, imagePath) {
   edmSenderName.textContent = client;
   edmAvatar.textContent = client.charAt(0).toUpperCase();
   edmRights.textContent = `© All rights belong to ${client} & Exito Media Concepts. These are client-approved designs, some shown here are my own variations of the same.`;
-  edmFrameBody.innerHTML = imagePath
+   edmFrameBody.innerHTML = imagePath
     ? `<img src="${imagePath}" alt="EDM designed for ${client}" style="max-width:75%; margin:0 auto; display:block;">`
     : `<div class="skeleton-box"></div>`;
   edmOverlay.classList.add('open');
