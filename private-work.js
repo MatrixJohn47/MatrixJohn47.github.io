@@ -19,6 +19,8 @@ const lightboxClose = document.getElementById('lightboxClose');
 
 const categoryClients = {
   'EDMs': [
+    { name: 'Cygnet.one', image: null },
+    { name: 'Aelum | Service Now', image: null },
     { name: 'Zoomtopia', image: null },
     { name: 'Zoom', image: null },
     { name: 'SAAS22', image: null },
