@@ -20,7 +20,7 @@ const lightboxClose = document.getElementById('lightboxClose');
 const categoryClients = {
   'EDMs': [
     { name: 'Cygnet.one', image: null },
-    { name: 'Aelum | Service Now', image: null },
+    { name: 'Aelum | Service Now', image: '../assets/private-work/edm/Aelum Service Now EDM.png' },
     { name: 'Zoomtopia', image: null },
     { name: 'Zoom', image: null },
     { name: 'SAAS22', image: null },
