@@ -512,3 +512,19 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
   border-top: 1px solid #d9d2c2; color: #a39c8c;
   font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
 }
+
+
+.wip-phase {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid;
+  margin-left: 10px;
+}
+.wip-phase.active { color: #7a1f3d; border-color: #7a1f3d; }
+.wip-phase.ready { color: #145a32; border-color: #145a32; }
+.wip-phase.research { color: #a39c8c; border-color: #a39c8c; }
