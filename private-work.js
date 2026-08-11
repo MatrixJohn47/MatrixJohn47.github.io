@@ -19,9 +19,9 @@ const lightboxClose = document.getElementById('lightboxClose');
 
 const categoryClients = {
   'EDMs': [
-    { name: 'Cygnet.one', image: null },
+    { name: 'Cygnet.one', image: '../assets/private-work/edm/Cygnet EDM.png' },
     { name: 'Aelum | Service Now', image: '../assets/private-work/edm/Aelum Service Now EDM.png' },
-    { name: 'Zoomtopia', image: '../assets/private-work/edm/Cygnet EDM.png' },
+    { name: 'Zoomtopia', image: null },
     { name: 'Zoom', image: null },
     { name: 'SAAS22', image: null },
     { name: 'Okta', image: null },
