@@ -62,7 +62,7 @@ const socialPosts = [
   { image: '../assets/private-work/social-media/HR South Africa Whatsapp 2.png' },
   { image: '../assets/private-work/social-media/DTS Thailand Ads.png' },
   { image: '../assets/private-work/social-media/CFO KSA Whatsapp Campaign.png' },
-  { image: '../assets/private-work/social-media/2.png' },
+  { image: '../assets/private-work/social-media/BFSI Singapore Delegate Campaign.png' },
   { image: '../assets/private-work/social-media/Brainbox Creative.png' },
   { image: '../assets/private-work/social-media/DTS Indo 1:1 Whatsapp Campaign 65 days to go.png' },
   { image: '../assets/private-work/social-media/SAP_.png' },
