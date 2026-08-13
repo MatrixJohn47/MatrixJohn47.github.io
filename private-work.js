@@ -43,10 +43,12 @@ const socialPosts = [
   { image: '../assets/private-work/social-media/HR SA Whatsapp Campaign..png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement Final.png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement.png' },
+  { image: '../assets/private-work/social-media/BFSI Thailand Whatsapp Campaign.png' },
   { image: '../assets/private-work/social-media/HR UAE Announcement.png' },
   { image: '../assets/private-work/social-media/DTS Qatar Event Announcement.png' },
   { image: '../assets/private-work/social-media/HR UAE Event Announcement.png' },
   { image: '../assets/private-work/social-media/DTS UAE Im Speaking.png' },
+  { image: '../assets/private-work/social-media/Pharma IT Whatsapp Campaign.png' },
   { image: '../assets/private-work/social-media/HR UAE Im Speaking.png' },
   { image: '../assets/private-work/social-media/CFO SA Im Speaking.png' },
   { image: '../assets/private-work/social-media/HR South Africa Im Speaking.png' },
@@ -69,6 +71,7 @@ const socialPosts = [
   { image: '../assets/private-work/social-media/SAP_.png' },
   { image: '../assets/private-work/social-media/SGN.png' },
   { image: '../assets/private-work/social-media/CSS UAE Whatsapp Campaign .png' },
+  { image: '../assets/private-work/social-media/DTS Thailand Campaign With photo.png' },
   // { image: '../assets/private-work/social-01.jpg' },
 ];
 
