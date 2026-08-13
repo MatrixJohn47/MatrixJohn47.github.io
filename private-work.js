@@ -40,6 +40,7 @@ const categoryClients = {
 
 // Add real image paths here as posts become available.
 const socialPosts = [
+  { image: '../assets/private-work/social-media/DTS UAE Whatsapp Campaign.png' },
   { image: '../assets/private-work/social-media/HR SA Whatsapp Campaign..png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement Final.png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement.png' },
