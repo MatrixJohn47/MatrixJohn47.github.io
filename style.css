@@ -417,12 +417,39 @@ body { background: #f6f1e7; color: #1a1a1a; font-family: 'Inter', sans-serif; }
 .empty-note { text-align: center; margin-top: 50px; color: #a39c8c; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
 
 .logo-tile {
-  aspect-ratio: 4/3; border-radius: 8px; border: 1.5px solid rgba(26,26,26,0.3);
-  display: flex; align-items: center; justify-content: center; cursor: pointer;
-  transition: all .2s ease; background: #fbf8f2;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  border: 1.5px solid rgba(26,26,26,0.3);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .2s ease;
+  background-color: #fbf8f2;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  overflow: hidden;
 }
-.logo-tile:hover { border-color: #1a1a1a; background: #f0ebe0; }
-.logo-tile span { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #5c5648; letter-spacing: 0.5px; }
+.logo-tile:hover { border-color: #1a1a1a; }
+.logo-tile span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #fff;
+  letter-spacing: 0.3px;
+  background: rgba(26,26,26,0.65);
+  width: 100%;
+  padding: 8px 10px;
+  text-align: center;
+}
+.logo-tile.no-thumb {
+  align-items: center;
+  background-color: #fbf8f2;
+}
+.logo-tile.no-thumb span {
+  background: none;
+  color: #5c5648;
+}
 
 /* ===== EDM Viewer ===== */
 
