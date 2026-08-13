@@ -44,6 +44,7 @@ const socialPosts = [
   { image: '../assets/private-work/social-media/HR SA Whatsapp Campaign..png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement Final.png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement.png' },
+  { image: '../assets/private-work/social-media/BFSI Kenya Whatsapp Campaign.png' },
   { image: '../assets/private-work/social-media/BFSI Thailand Whatsapp Campaign.png' },
   { image: '../assets/private-work/social-media/HR UAE Announcement.png' },
   { image: '../assets/private-work/social-media/DTS Qatar Event Announcement.png' },
