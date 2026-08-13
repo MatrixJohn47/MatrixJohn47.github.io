@@ -134,11 +134,13 @@ cards.forEach(card => {
         item.className = 'skeleton-item';
 
         if (isEdmCategory) {
-          const tile = document.createElement('div');
-          tile.className = 'logo-tile';
-          tile.innerHTML = `<span>${client}</span>`;
-          tile.addEventListener('click', () => openEdm(client, image));
-          item.appendChild(tile);
+        const tile = document.createElement('div');
+        const thumb = entry.thumb || null;
+        tile.className = thumb ? 'logo-tile' : 'logo-tile no-thumb';
+        if (thumb) tile.style.backgroundImage = `url('${thumb}')`;
+        tile.innerHTML = `<span>${client}</span>`;
+        tile.addEventListener('click', () => openEdm(client, image));
+        item.appendChild(tile);
         } else {
           const box = document.createElement('div');
           box.className = 'skeleton-box';
