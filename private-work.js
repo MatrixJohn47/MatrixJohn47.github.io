@@ -19,7 +19,7 @@ const lightboxClose = document.getElementById('lightboxClose');
 
 const categoryClients = {
   'EDMs': [
-    { name: 'Cygnet.one', image: '../assets/private-work/edm/Cygnet EDM.png', thumb: '../null' },
+    { name: 'Cygnet.one', image: '../assets/private-work/edm/Cygnet EDM.png', thumb: '../assets/private-work/thumnails/cyg ico-01.png' },
     { name: 'Aelum | Service Now', image: '../assets/private-work/edm/Aelum EDM.png', thumb: '../null' },
     { name: 'Zoomtopia', image: '../assets/private-work/edm/Zoomtopia EDM.png', thumb: '../null' },
     { name: 'Zoom', image: '../assets/private-work/edm/Zoom1 EDM.png', thumb: '../null' },
