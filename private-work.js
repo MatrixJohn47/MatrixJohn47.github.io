@@ -41,6 +41,7 @@ const categoryClients = {
 
 // Add real image paths here as posts become available.
 const socialPosts = [
+  { image: '../assets/private-work/social-media/HR SA Whatsapp Campaign..png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement Final.png' }, 
   { image: '../assets/private-work/social-media/BFSI Kenya Announcement.png' },
   { image: '../assets/private-work/social-media/HR UAE Announcement.png' },
@@ -50,6 +51,7 @@ const socialPosts = [
   { image: '../assets/private-work/social-media/HR UAE Im Speaking.png' },
   { image: '../assets/private-work/social-media/CFO SA Im Speaking.png' },
   { image: '../assets/private-work/social-media/HR South Africa Im Speaking.png' },
+  { image: '../assets/private-work/social-media/DTS Indo Whatsapp Campaign.png' },
   { image: '../assets/private-work/social-media/Devops Dubai 2024.jpeg' },
   { image: '../assets/private-work/social-media/DTS Qatar 2days to go.png' },
   { image: '../assets/private-work/social-media/DTS Qatar 1 day to go.png' },
@@ -67,6 +69,7 @@ const socialPosts = [
   { image: '../assets/private-work/social-media/DTS Indo 1:1 Whatsapp Campaign 65 days to go.png' },
   { image: '../assets/private-work/social-media/SAP_.png' },
   { image: '../assets/private-work/social-media/SGN.png' },
+  { image: '../assets/private-work/social-media/CSS UAE Whatsapp Campaign .png' },
   // { image: '../assets/private-work/social-01.jpg' },
 ];
 
