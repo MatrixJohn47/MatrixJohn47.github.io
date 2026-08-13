@@ -34,7 +34,7 @@ const categoryClients = {
     { name: 'Digitus', image: '../assets/private-work/edm/Digitus EDM.png' },
     { name: 'Databricks', image: '../assets/private-work/edm/Databricks EDM.png' },
   ],
-  'Event Onsite Collaterals': ['DTS', 'CSS', 'Infor', 'SAP|IKYAM', 'Concentrix+Genesys', 'SHI|AWS|Snowflake', 'Freshworks+Emergys', 'Concentrix+PaloAlto'],
+  'Event Onsite Collaterals': ['DTS', 'CSS', 'Infor', 'Concentrix | Genesys', 'Snowflake | MLAI | Microsoft', 'Freshworks | Emergys', 'Concentrix | PaloAlto'],
   'Full System Showcase': ['Mongodb', 'GCP', 'Cygnet one', 'Coursera']
 };
 
